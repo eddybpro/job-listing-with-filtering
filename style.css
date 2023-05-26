@@ -308,6 +308,11 @@ footer{
 }
 
 @media(hover:hover){
+    .selected-tags .tag:hover{
+        background-color: var(--Light-Grayish-Cyan-Filter-Tablets);
+        color: var(--Desaturated-Dark-Cyan);
+    }
+    
     .close:hover{
         background-color: var(--Very-Dark-Grayish-Cyan);
     }
