@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+:root{
+    --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+    --Light-Grayish-Cyan-Background: hsl(180, 52%, 96%);
+    --Light-Grayish-Cyan-Filter-Tablets: hsl(180, 31%, 95%);
+    --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+    --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+    --White:hsl(0, 0%, 100%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    width: 100%;
+    height: 15.5rem;
+    background: url('./images/bg-header-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--Desaturated-Dark-Cyan);
+}
+
+main{
+    padding: 5.7rem 2.25rem 2rem;
+    background-color: var(--Light-Grayish-Cyan-Background);
+}
+
+.selected-tags{
+    transform: translateY(-12rem);
+    display: grid;
+    grid-template-columns: 90% 10%;
+    align-items: center;
+    background-color: var(--White);
+    border-radius: .5rem;
+    padding: 2rem 1.5rem;
+}
+
+.clear-btn{
+    background-color: transparent;
+    color: var(--Dark-Grayish-Cyan);
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all .2s ease-in-out;
+}
+
+.selected-tags-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btns-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selected-tags .tag{
+    display: block;
+    margin: .5rem 1rem;
+}
+
+.close{
+    display: block;
+    border: none;
+    outline: none;
+    background-color: var(--Desaturated-Dark-Cyan);
+    cursor: pointer;
+    padding: .9rem 1rem;
+    transform: translateX(-1.1rem);
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    transition: all .2s ease-in-out;
+}
+
+.card{
+    box-shadow: 0 5px 10px -5px var(--Desaturated-Dark-Cyan);
+    background-color: var(--White);
+    padding: 0 1.5rem 2.5rem;
+    border-radius: .5rem;
+    margin-bottom: 4rem;
+    border-left: .6rem solid var(--White);
+}
+
+.featured-card{
+    border-color:var(--Desaturated-Dark-Cyan);
+}
+
+.company-logo{
+    width: 4.7rem;
+    transform: translate(.5rem, -2.5rem);
+}
+
+.job-features{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+    margin: -1.5rem 0 .6rem;
+}
+
+.company-name{
+    font-size: 1.5rem;
+    color: var(--Desaturated-Dark-Cyan);
+    margin-right: 1.6rem;
+    margin-left: .6rem;
+}
+
+.new, .featured{
+    padding: .4rem 1rem;
+    border: none;
+    outline: none;
+    color: var(--White);
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.new{
+    background-color: var(--Desaturated-Dark-Cyan);
+}
+
+.featured{
+    background-color: var(--Very-Dark-Grayish-Cyan);
+}
+
+.job-position{
+    font-size: 1.5rem;
+    color: var(--Very-Dark-Grayish-Cyan);
+    margin: 1.4rem 0 .3rem .6rem;
+    transition: color .2s ease-in-out;
+}
+
+.job-conditions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.post-time,
+.contract,
+.location{
+    color: var(--Dark-Grayish-Cyan);
+    font-size: 1.5rem;
+    position: relative;
+    margin-left: .5rem;
+}
+
+.contract::before,
+.location::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    left: -1.25rem;
+    top: 30%;
+    transform: translateY(-30%);
+    background-color: var(--Dark-Grayish-Cyan);
+}
+
+.line{
+    height: .1rem;
+    width: 100%;
+    background-color: var(--Dark-Grayish-Cyan);
+    margin-bottom: 1.4rem;
+}
+
+.tags-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tag{
+    background-color: var(--Light-Grayish-Cyan-Filter-Tablets);
+    color: var(--Desaturated-Dark-Cyan);
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    padding: 1rem 1.4rem;
+    border-radius: .5rem;
+    margin: .8;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+/* --------FOOTER ---------- */
+
+footer{
+    text-align: center;
+    padding: 2rem 1.5rem;
+}
+
+.attribution{
+    font-size: 1.5rem;
+    color: var(--Dark-Grayish-Cyan);
+}
+
+.attribution > a{
+    color: var(--Desaturated-Dark-Cyan);
+}
+
+/* ----------MEDIA QUERY ----------- */
+@media screen and (min-width:890px) {
+    /* ---------HEADER -------- */
+
+    header{
+        background: url('./images/bg-header-desktop.svg');
+        background-position: top left .5rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: var(--Desaturated-Dark-Cyan);
+        overflow-x: hidden;
+    }
+    /*  ------- MAIN  ------ */
+
+    main{
+        padding: 7.5rem 6rem 2rem;
+    }
+
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 5rem;
+        padding: 0 3rem 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .job-info{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    .company-logo{
+        width: 9rem;
+        transform: none;
+    }
+
+    .job-info > div{
+        margin-top: 2rem;
+    }
+
+    .job-features{
+        margin: 1.5rem 0 .6rem;
+    }
+
+    .company-name{
+        font-size: 2rem;
+    }
+
+    .job-position{
+        font-size: 2rem;
+    }
+
+    .tags-container{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .tag{
+        display: block;
+    }
+
+    .mobile-only{
+        display: none;
+    }
+}
+
+.none{
+    display: none;
+}
+
+@media(hover:hover){
+    .close:hover{
+        background-color: var(--Very-Dark-Grayish-Cyan);
+    }
+
+    .clear-btn:hover{
+        color: var(--Desaturated-Dark-Cyan);
+        text-decoration: underline;
+    }
+
+    .job-position:hover{
+        color: var(--Desaturated-Dark-Cyan);
+    }
+
+    .tag:hover{
+        color: var(--White);
+        background-color: var(--Desaturated-Dark-Cyan);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
